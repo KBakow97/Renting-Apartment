@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class=" text-3xl">Welcome on the basic Django site. Project still in progress :) </h1><br>
+<a href="{% url 'apartments:apartment_list' %}" class="px-3 py-2 text-blue-500">Check Apartment list</a>
+<a href="{% url 'apartments:create_apartment' %}" class="px-3 py-2 text-blue-500">Add new apartment</a>
+{% endblock content %}

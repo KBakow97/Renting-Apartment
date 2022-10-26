@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class=" text-3xl">Apartments:</h1><br>
+<a href="{% url 'apartments:create_apartment' %}" class="px-3 py-2 text-blue-500">Add new apartment</a>
+
+{% for apartment in object_list %}
+<div class="px-3 py-2 bg-gray-200 rounded-sm">
+    <h3 class="text-3xl text-gray-900">{{apartment.title}}</h3>
+    <a href="/apartments/apartment_detail/{{apartment.id}}"><img src="{{apartment.image.url}}" alt=""></a>
+    <a href="/apartments/apartment_detail/{{apartment.id}}" class="px-3 py-2 text-blue-500">View details</a>
+</div>
+<br>
+{% endfor %}
+{% endblock content %}

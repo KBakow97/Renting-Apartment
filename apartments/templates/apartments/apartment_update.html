@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-4xl text-gray-900">Update Apartment</h1>
+<form method="post" enctype="multipart/form-data" class="px-3 py-2 bg-gray-100 rounded-sm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="bg-gray-500">Submit</button>
+</form>
+{% endblock content %}

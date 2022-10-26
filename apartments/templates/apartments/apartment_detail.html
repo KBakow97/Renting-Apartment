@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="px-3 py-2 bg-gray-200 rounded-sm">
+    <h3 class="text-3xl text-gray-900">{{ apartment.title }}</h3>
+    <img src="{{apartment.image.url}}" alt="">
+    <p class="text-gray-900">${{ apartment.price }} for month</p>
+    <p class="text-gray-900">{{ apartment.adress }}</p>
+    <p class="text-gray-600 text-sm">Number of bathrooms: {{ apartment.num_bathrooms }}</p>
+    <p class="text-gray-600 text-sm">Number of bedrooms: {{ apartment.num_bedrooms }}</p>
+    <p class="text-gray-600 text-sm">Square footage: {{ apartment.square_footage }}m<sup>2</sup></p>
+    <p class="py-1">Description:{{apartment.description}}</p>
+    <div class="mt-3 py-3 border-t border-gray-200"></div>
+    <a href="/apartments/apartment_update/{{apartment.id}}" class="px-3 py-2 text-blue-500">Edit</a>
+    <a href="/apartments/delete_apartment/{{apartment.id}}" class="px-3 py-2 text-blue-500">Delete</a>
+</div>
+{% endblock content %}
